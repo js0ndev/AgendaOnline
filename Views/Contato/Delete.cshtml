@@ -1,0 +1,42 @@
+@model AgendaOnline.Models.Contato
+
+<div class="container mt-5">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h3>Excluir contato</h3>
+
+            <hr/>
+
+            <p>
+                Deseja realmente excluir:
+            </p>
+
+            <strong>
+                @Model.Nome
+            </strong>
+
+            <form asp-action="ConfirmDelete">
+
+                <input asp-for="Id" hidden />
+
+                <button class="btn btn-danger">
+                    Excluir
+                </button>
+
+                <a asp-action="Index"
+                   class="btn btn-secondary">
+
+                   Cancelar
+
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
